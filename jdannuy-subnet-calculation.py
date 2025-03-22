@@ -1,4 +1,12 @@
+import argparse
 import ipaddress
+
+# Set up argparse to handle command line arguments
+def setup_argparse():
+    parser = argparse.ArgumentParser(description="Calculate subnet details from IP and subnet mask")
+    parser.add_argument("ip", help="IP address (e.g., 192.168.1.10)")
+    parser.add_argument("mask", help="Subnet mask (e.g., 255.255.255.0)")
+    return parser.parse_args()
 
 def calculate_subnet(ip, mask):
     """Calculates subnet details from IP and mask."""
@@ -24,13 +32,13 @@ def main():
     print("Haiwei Liu - hliu232")
     print("="*36)
 
-    # Setup argparse (from Member 1)
+    # Setup argparse
     args = setup_argparse()
 
-    # Validate the inputs (from Member 1)
+    # Validate the inputs
     try:
-        ipaddress.IPv4Address(args.ip)
-        ipaddress.IPv4Address(args.mask)
+        ipaddress.IPv4Address(args.ip)  # Validate IP
+        ipaddress.IPv4Address(args.mask)  # Validate mask
     except ValueError:
         print("Failed: Invalid IP or subnet mask.")
         return
