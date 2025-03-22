@@ -6,7 +6,7 @@
 This Python script calculates subnet details such as the network address, broadcast address, usable IPs, subnet mask, and more, based on a given IP address and subnet mask.
 
 #Group 3 - NEE - Professor Eric Brauer
-## Members
+## Team Members
 - Jhanlyn Brita Dannuy (jdannuy)
 - Haiwei Liu (hliu232)
 
@@ -28,4 +28,9 @@ It allows users to input an **IP address** and a **subnet mask** to calculate ne
 1. **assignment2.py**  
    The main Python script that calculates subnet details based on user input for IP address and subnet mask.
 
-
+## How to Contribute
+1. Fork the repository and clone it locally.
+2. Create a new branch for your feature or fix.
+3. Make your changes and test them thoroughly.
+4. Create a pull request with a description of the changes you made.
+5. Once your pull request is reviewed, it will be merged into the `main` branch.
