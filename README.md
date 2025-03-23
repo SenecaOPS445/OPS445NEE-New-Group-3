@@ -25,13 +25,16 @@ The subnet calculator accepts an IP address and subnet mask as input and compute
 
 ### Example Output:
 For the ip and subnet mask:
-    IP = `192.168.1.10`
-    subnet mask = `255.255.255.0`
+
+- IP = `192.168.1.10`
+- subnet mask = `255.255.255.0`
+
 The output will show:
-    Network Address: 192.168.1.0
-    Broadcast Address: 192.168.1.255
-    First Usable IP: 192.168.1.1
-    Last Usable IP: 192.168.1.254
-    Subnet Mask: 255.255.255.0
-    Total Hosts: 256
-    Usable Hosts: 254
+
+- Network Address: 192.168.1.0
+- Broadcast Address: 192.168.1.255
+- First Usable IP: 192.168.1.1
+- Last Usable IP: 192.168.1.254
+- Subnet Mask: 255.255.255.0
+- Total Hosts: 256
+- Usable Hosts: 254
