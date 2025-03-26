@@ -31,7 +31,7 @@ For the ip and subnet mask:
 
 The output will show:
 
-```python
+```
 Network Address: 192.168.1.0
 Broadcast Address: 192.168.1.255
 First Usable IP: 192.168.1.1
