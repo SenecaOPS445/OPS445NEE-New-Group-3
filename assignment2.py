@@ -80,7 +80,7 @@ def main():
     if "Error" in subnet_info:
         print(f"Failed: {subnet_info['Error']}")
     else:
-        print("\n========= Subnet Details ==========")
+        print("\n==== Subnet Details ===")
         for key, value in subnet_info.items():
             print(f"{key}: {value}")
 
