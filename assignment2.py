@@ -73,7 +73,7 @@ if __name__ == "__main__":
     subnet_info = calculate_subnet(args.ip, args.mask)
 
     # Display results
-    print("\n=== Subnet Details ===")
+    print("\n========= Subnet Details ==========")
     for key, value in subnet_info.items():
         print(f"{key}: {value}")
 
