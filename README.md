@@ -31,10 +31,18 @@ For the ip and subnet mask:
 
 The output will show:
 
-- Network Address: 192.168.1.0
-- Broadcast Address: 192.168.1.255
-- First Usable IP: 192.168.1.1
-- Last Usable IP: 192.168.1.254
-- Subnet Mask: 255.255.255.0
-- Total Hosts: 256
-- Usable Hosts: 254
+```python
+Network Address: 192.168.1.0
+Broadcast Address: 192.168.1.255
+First Usable IP: 192.168.1.1
+Last Usable IP: 192.168.1.254
+Subnet Mask: 255.255.255.0
+Total Hosts: 256
+Usable Hosts: 254
+```
+
+## Error Handling and Validation
+The script validates user input to ensure the IP address and subnet mask are valid. If either input is invalid, the script will return an error message indicating the issue:
+
+### Failed: Invalid IP or subnet mask.
+This helps users quickly identify and resolve any input mistakes.
