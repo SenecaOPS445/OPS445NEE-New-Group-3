@@ -48,15 +48,33 @@ def setup_argparse():
     # Return parsed arguments
     return parser.parse_args()
 
+# The validate_ip_and_mask() function comes from member 1
+def validate_ip_and_mask(ip, mask):
+    """Validate the IP and mask."""
+    try:
+        ipaddress.IPv4Address(ip)  # Validate IP
+        ipaddress.IPv4Address(mask)  # Validate mask
+        return True
+    except ValueError:
+        return False
+
+
 
 if __name__ == "__main__":
 
      # Reuse the setup and validation from Member 1
     args = setup_argparse()
 
+    # Validate IP and Mask
+    if not validate_ip_and_mask(args.ip, args.mask):
+        print("Failed: Invalid IP or subnet mask.")
+
+    # Calculate subnet info
     subnet_info = calculate_subnet(args.ip, args.mask)
-   
-    print("\n========= Subnet Details =========")
+
+    # Display results
+    print("\n=== Subnet Details ===")
     for key, value in subnet_info.items():
         print(f"{key}: {value}")
-    print("==================================\n")
+
+
