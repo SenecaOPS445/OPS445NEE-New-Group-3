@@ -58,23 +58,34 @@ def validate_ip_and_mask(ip, mask):
     except ValueError:
         return False
 
-
-
-if __name__ == "__main__":
-
-     # Reuse the setup and validation from Member 1
+def main():
+    # Reuse the setup and validation from Member 1
     args = setup_argparse()
+
+    # If IP or mask are not passed, prompt the user
+    if not args.ip:
+        args.ip = input("Enter IP address (e.g., 192.168.1.10): ")
+    if not args.mask:
+        args.mask = input("Enter subnet mask (e.g., 255.255.255.0): ")
 
     # Validate IP and Mask
     if not validate_ip_and_mask(args.ip, args.mask):
         print("Failed: Invalid IP or subnet mask.")
+        return
 
     # Calculate subnet info
     subnet_info = calculate_subnet(args.ip, args.mask)
 
     # Display results
-    print("\n========= Subnet Details ==========")
-    for key, value in subnet_info.items():
-        print(f"{key}: {value}")
+    if "Error" in subnet_info:
+        print(f"Failed: {subnet_info['Error']}")
+    else:
+        print("\n========= Subnet Details ==========")
+        for key, value in subnet_info.items():
+            print(f"{key}: {value}")
 
 
+
+if __name__ == "__main__":
+    main()
+    
