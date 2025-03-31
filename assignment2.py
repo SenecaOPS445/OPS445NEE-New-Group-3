@@ -1,6 +1,7 @@
 import argparse
 import ipaddress
 
+
 # Group Information
 group_info = """
 ===================================
@@ -33,9 +34,6 @@ def validate_ip_and_mask(ip, mask):
         return False
 
 def main():
-    # Print Group Information
-    print(group_info)
-
     # Initialize argparse
     args = setup_argparse()
 
@@ -50,9 +48,6 @@ def main():
         print("Failed: Invalid IP or subnet mask.")
         return
 
-    print("\n=== Subnet Details ===")
-    print(f"IP Address: {args.ip}")
-    print(f"Subnet Mask: {args.mask}")
     print("Inputs are valid! Proceeding with subnet calculation...")
 
 if __name__ == "__main__":
