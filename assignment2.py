@@ -72,18 +72,18 @@ def main():
     if not validate_ip_and_mask(args.ip, args.mask):
         print("Failed: Invalid IP or subnet mask.")
         return
-    
-    
-    # Calculate subnet info
-    subnet_info = calculate_subnet(args.ip, args.mask)
-
-    # Display results
-    if "Error" in subnet_info:
-        print(f"Failed: {subnet_info['Error']}")
     else:
-        print("\n=== Subnet Details ===")
-        for key, value in subnet_info.items():
-            print(f"{key}: {value}")
+    
+        # Calculate subnet info
+        subnet_info = calculate_subnet(args.ip, args.mask)
+
+        # Display results
+        if "Error" in subnet_info:
+            print(f"Failed: {subnet_info['Error']}")
+        else:
+            print("\n=== Subnet Details ===")
+            for key, value in subnet_info.items():
+                print(f"{key}: {value}")
 
 
 
