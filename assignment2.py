@@ -40,11 +40,11 @@ def calculate_subnet(ip, mask):
     
 # The setup_argparse() function comes from member 1
 def setup_argparse():
-    """Set up argparse to handle IP and subnet mask as arguments."""
+    """Set up argparse to handle optional arguments."""
     parser = argparse.ArgumentParser(description="Calculate subnet details from IP and subnet mask")
-    parser.add_argument("ip", help="IP address (e.g., 192.168.1.10)")
-    parser.add_argument("mask", help="Subnet mask (e.g., 255.255.255.0)")
-    
+    parser.add_argument("--ip", help="IP address (e.g., 192.168.1.10)")
+    parser.add_argument("--mask", help="Subnet mask (e.g., 255.255.255.0)")
+
     # Return parsed arguments
     return parser.parse_args()
 
@@ -62,17 +62,18 @@ def main():
     # Reuse the setup and validation from Member 1
     args = setup_argparse()
 
-    # If IP or mask are not passed, prompt the user
+    # Step 3: If IP or mask are not passed, prompt the user to enter them
     if not args.ip:
         args.ip = input("Enter IP address (e.g., 192.168.1.10): ")
     if not args.mask:
         args.mask = input("Enter subnet mask (e.g., 255.255.255.0): ")
 
-    # Validate IP and Mask
+    # Step 4: Validate user input
     if not validate_ip_and_mask(args.ip, args.mask):
         print("Failed: Invalid IP or subnet mask.")
         return
-
+    
+    
     # Calculate subnet info
     subnet_info = calculate_subnet(args.ip, args.mask)
 
