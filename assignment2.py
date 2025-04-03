@@ -5,6 +5,7 @@ Description:
 This script calculates subnet details including network address, IP range, broadcast address, and more, 
 based on a given IP address and subnet mask.
 '''
+
 # Group Information
 group_info = """
 
