@@ -8,7 +8,6 @@ based on a given IP address and subnet mask.
 
 # Group Information
 group_info = """
-
 ===================================
 Group 3
 Network Configuration and Subnetting
