@@ -6,12 +6,8 @@ This script calculates subnet details including network address, IP range, broad
 based on a given IP address and subnet mask.
 '''
 
-import argparse
-import ipaddress
-
 # Group Information
 group_info = """
-
 ===================================
 Group 3
 Network Configuration and Subnetting
@@ -20,6 +16,9 @@ Jhanlyn Brita Dannuy (jdannuy)
 Haiwei Liu (hliu232)
 ===================================
 """
+
+import argparse
+import ipaddress
 
 # Step 1: Setting up argparse for optional arguments
 def setup_argparse():
